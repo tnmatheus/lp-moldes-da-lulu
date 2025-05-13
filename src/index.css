@@ -1,0 +1,143 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 27 100% 98%; /* lulu-background */
+    --foreground: 0 25% 20%; /* lulu-darkText */
+    --card: 27 100% 98%; /* lulu-background */
+    --card-foreground: 0 25% 20%; /* lulu-darkText */
+    --popover: 27 100% 98%; /* lulu-background */
+    --popover-foreground: 0 25% 20%; /* lulu-darkText */
+    --primary: 0 44% 51%; /* lulu-primary */
+    --primary-foreground: 27 100% 98%; /* lulu-background (para contraste com lulu-primary) */
+    --secondary: 30 45% 75%; /* lulu-accent */
+    --secondary-foreground: 0 25% 20%; /* lulu-darkText */
+    --muted: 30 100% 97%; /* lulu-soft */
+    --muted-foreground: 0 20% 45%; /* lulu-lightText */
+    --accent: 30 45% 75%; /* lulu-accent */
+    --accent-foreground: 0 25% 20%; /* lulu-darkText */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 28 43% 88%; /* lulu-border */
+    --input: 28 43% 88%; /* lulu-border */
+    --ring: 0 44% 51%; /* lulu-primary */
+    --radius: 0.75rem;
+  }
+ 
+  .dark {
+    /* Mantendo o tema escuro original por enquanto, pode ser ajustado depois se necessário */
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 44% 51%; /* lulu-primary */
+    --primary-foreground: 27 100% 98%;
+    --secondary: 30 45% 75%; /* lulu-accent */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 30 45% 75%; /* lulu-accent */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 28 43% 88%; /* lulu-border */
+    --input: 28 43% 88%; /* lulu-border */
+    --ring: 0 44% 51%; /* lulu-primary */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-lulu-background text-lulu-darkText;
+    font-family: 'Montserrat', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-lulu-primary to-lulu-accent;
+}
+
+.hero-pattern {
+  background-color: theme('colors.lulu.background');
+  background-image: radial-gradient(theme('colors.lulu.lilac / 50%') 0.5px, transparent 0.5px), radial-gradient(theme('colors.lulu.lilac / 50%') 0.5px, theme('colors.lulu.background') 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  opacity: 0.3;
+}
+
+.feature-card {
+  @apply relative overflow-hidden rounded-2xl p-6 border border-lulu-border bg-lulu-soft shadow-soft transition-all duration-300 hover:shadow-medium hover:-translate-y-1;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, theme('colors.lulu.primary'), theme('colors.lulu.accent'));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.testimonial-card {
+  @apply relative overflow-hidden rounded-2xl p-6 border border-lulu-border bg-lulu-soft shadow-soft;
+}
+
+.testimonial-card::after {
+  content: "\"";
+  position: absolute;
+  bottom: -20px;
+  right: 10px;
+  font-size: 120px;
+  color: theme('colors.lulu.primary / 10%');
+  font-family: 'Playfair Display', serif;
+}
+
+.price-card {
+  @apply relative overflow-hidden rounded-2xl p-8 border border-lulu-border bg-lulu-soft shadow-soft transition-all duration-300;
+}
+
+.price-card.featured {
+  @apply border-lulu-primary shadow-medium;
+}
+
+.price-card.featured::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, theme('colors.lulu.primary / 5%') 0%, theme('colors.lulu.accent / 5%') 100%);
+  z-index: -1;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, theme('colors.lulu.primary / 10%') 0%, theme('colors.lulu.accent / 10%') 100%);
+}
+
+.faq-section {
+  background-color: theme('colors.lulu.background');
+  background-image: radial-gradient(theme('colors.lulu.lilac / 30%') 0.5px, transparent 0.5px), radial-gradient(theme('colors.lulu.lilac / 30%') 0.5px, theme('colors.lulu.background') 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  opacity: 0.5;
+}
