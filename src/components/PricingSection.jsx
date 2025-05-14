@@ -52,13 +52,12 @@ const PriceCard = ({
 const PricingSection = ({ handleBuyNow }) => {
   const pricingPlans = [
     {
-      title: "MoldeVestido Luna",
-      price: 24,
+      title: "Molde Vestido Luna",
+      price: "24,90",
       features: [
         "Modelagem completa (PDF)",
         "Tamanhos P ao GG",
         "Vídeo tutorial completo",
-        "Suporte por 30 dias",
       ],
       isFeatured: true,
     },
@@ -75,7 +74,8 @@ const PricingSection = ({ handleBuyNow }) => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            Invista na sua <span className="gradient-text">carreira</span>
+            Comece agora a costurar algo lindo com{" "}
+            <span className="gradient-text">as próprias mãos</span>
           </motion.h2>
           <motion.p
             className="text-lg text-lulu-lightText max-w-3xl mx-auto"
@@ -84,7 +84,8 @@ const PricingSection = ({ handleBuyNow }) => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Escolha o pacote que melhor se adapta às suas necessidades.
+            Um molde completo, do jeitinho certo, com tutorial em vídeo e apoio
+            para você conseguir do início ao fim.
           </motion.p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">

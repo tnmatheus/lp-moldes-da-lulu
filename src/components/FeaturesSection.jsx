@@ -27,15 +27,15 @@ const FeaturesSection = () => {
   const features = [
     {
       icon: Scissors,
-      title: "Você vai conseguir",
+      title: "Costure com confiança",
       description:
-        "Mesmo que esteja começando agora, vai costurar seu próprio vestido com facilidade e se sentir realizada com o resultado.",
+        "Mesmo que você nunca tenha costurado um vestido, vai conseguir montar o seu com apoio total no vídeo — e se sentir orgulhosa de ver tudo pronto nas suas mãos.",
     },
     {
       icon: Award,
-      title: "Caimento lindo no corpo",
+      title: "Vista algo feito por você que valoriza seu corpo",
       description:
-        "O molde foi pensado para valorizar o seu corpo, com modelagem leve, confortável e acabamento bonito de verdade.",
+        "O Vestido Luna tem modelagem leve, elegante e confortável. Você costura em casa e o resultado parece roupa de loja — com caimento lindo de verdade.",
     },
     {
       icon: Clock,
@@ -74,8 +74,8 @@ const FeaturesSection = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            Por que escolher o{" "}
-            <span className="gradient-text">Vestido Luna</span>?
+            Por que o <span className="gradient-text"> Molde Vestido Luna</span>{" "}
+            é a escolha certa para você?
           </motion.h2>
           <motion.p
             className="text-lg text-lulu-lightText max-w-3xl mx-auto"
@@ -84,8 +84,9 @@ const FeaturesSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Nossa modelagem foi desenvolvida para garantir o melhor caimento e
-            facilidade de produção.
+            Uma modelagem pensada para valorizar o seu corpo, com caimento
+            perfeito e costura sem complicação — até pra quem nunca fez um
+            vestido antes.
           </motion.p>
         </div>
 

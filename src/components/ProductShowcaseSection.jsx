@@ -19,22 +19,22 @@ const ProductShowcaseSection = () => {
     {
       title: "Decote elegante",
       description:
-        "Valoriza o colo sem ser exagerado, perfeito para diversas ocasiões.",
+        "Valoriza o colo de forma sutil e charmosa — perfeito para se sentir linda em qualquer ocasião, sem exageros.",
     },
     {
       title: "Cintura marcada",
       description:
-        "Desenho que valoriza a silhueta feminina, criando um visual equilibrado.",
+        "Realça sua silhueta com equilíbrio e feminilidade, trazendo um visual leve e bem estruturado.",
     },
     {
       title: "Comprimento versátil",
       description:
-        "Opções de comprimento que podem ser facilmente ajustadas conforme preferência.",
+        "Pode ser ajustado ao seu gosto — ideal para quem ama vestidos mais curtos ou médios, sem abrir mão do estilo.",
     },
     {
-      title: "Mangas diferenciadas",
+      title: "Mangas com charme",
       description:
-        "Design exclusivo que adiciona um toque de sofisticação ao modelo.",
+        "Babados delicados nos ombros criam um toque romântico e sofisticado, deixando o vestido ainda mais especial.",
     },
   ];
 
@@ -50,14 +50,18 @@ const ProductShowcaseSection = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-lulu-darkText">
-              Detalhes que fazem a{" "}
-              <span className="gradient-text">diferença</span>
+              Detalhes que transformam o vestido{" "}
+              <span className="gradient-text">e você</span>
             </h2>
             <ul className="space-y-4">
               {details.map((detail, index) => (
                 <DetailItem key={index} {...detail} />
               ))}
             </ul>
+            <p className="mt-6 text-lulu-lightText text-base italic">
+              ✨ Cada detalhe foi pensado para que você se sinta linda, segura e
+              confiante ao vestir o que você mesma costurou.
+            </p>
           </motion.div>
           <motion.div
             className="md:w-1/2 order-1 md:order-2"

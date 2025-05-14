@@ -64,8 +64,8 @@ const TestimonialsSection = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            O que dizem nossas{" "}
-            <span className="gradient-text">costureiras</span>
+            Elas também duvidaram... Até costurarem o primeiro{" "}
+            <span className="gradient-text">Vestido Luna</span>
           </motion.h2>
           <motion.p
             className="text-lg text-lulu-lightText max-w-3xl mx-auto"
@@ -74,8 +74,8 @@ const TestimonialsSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Centenas de profissionais já transformaram seus negócios com nossa
-            modelagem.
+            Veja o que mulheres reais estão dizendo depois de costurar o Vestido
+            Luna — mesmo sem experiência com moldes.
           </motion.p>
         </div>
 
@@ -85,6 +85,10 @@ const TestimonialsSection = () => {
           ))}
         </div>
       </div>
+
+      <p className="mt-10 text-center text-lulu-lightText italic text-base">
+        ✨ Talvez a próxima história seja a sua.
+      </p>
     </section>
   );
 };

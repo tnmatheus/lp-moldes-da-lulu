@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/components/ui/use-toast";
@@ -19,12 +18,10 @@ function App() {
   const { toast } = useToast();
 
   const handleBuyNow = () => {
-    toast({
-      title: "Obrigado pelo interesse!",
-      description: "Em breve você receberá a modelagem do Vestido Luna.",
-      duration: 5000,
-      className: "bg-lulu-soft border-lulu-primary text-lulu-darkText",
-    });
+    setTimeout(() => {
+      window.location.href =
+        "https://pay.hotmart.com/T99227131L?bid=1747179836231";
+    }); // 2 segundos é tempo suficiente para ver o toast
   };
 
   return (

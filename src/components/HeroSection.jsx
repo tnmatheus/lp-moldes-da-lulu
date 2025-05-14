@@ -15,20 +15,24 @@ const HeroSection = ({ handleBuyNow }) => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-lulu-darkText">
-              Modelagem do <span className="gradient-text">Vestido Luna</span>{" "}
-              para Costureiras Criativas
+              E se o próximo vestido que você costurar fosse o{" "}
+              <span className="gradient-text">mais bonito que já fez?</span>{" "}
             </h1>
             <p className="text-lg text-lulu-lightText mb-8">
-              Crie o vestido perfeito com nossa modelagem exclusiva. Elegante,
-              versátil e fácil de fazer, o Vestido Luna vai transformar seu
-              negócio de costura.
+              Com o Molde Luna, você cria um vestido com acabamento de loja,
+              feito por você — do zero, em casa, com apoio total no vídeo. É só
+              imprimir, cortar e costurar.
+            </p>
+            <p className="text-base text-lulu-darkText mb-6 italic">
+              🎥 Quer ver como é simples? <strong>Assista ao vídeo</strong> e
+              descubra como o molde funciona na prática.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Button
                 onClick={handleBuyNow}
                 className="bg-lulu-primary hover:bg-lulu-buttonHover text-lulu-background px-8 py-6 rounded-xl text-lg font-semibold shadow-medium hover:shadow-lg transition-all duration-300"
               >
-                Quero Fazer o Vestido Luna
+                Começar meu vestido agora
               </Button>
             </div>
           </motion.div>
@@ -47,6 +51,8 @@ const HeroSection = ({ handleBuyNow }) => {
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
                 className="relative rounded-2xl shadow-2xl w-full aspect-video"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </motion.div>
